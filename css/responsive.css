@@ -1,0 +1,214 @@
+/* 
+ * Responsive Styles for Personal Portfolio
+ * Author: Your Name
+ */
+
+/* ====== Media Queries ====== */
+
+/* Large Desktop (1200px and up) */
+@media screen and (min-width: 1200px) {
+    /* No specific changes - default styles apply */
+}
+
+/* Desktop (992px to 1199px) */
+@media screen and (max-width: 1199px) {
+    .strengths-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media screen and (max-width: 991px) {
+    /* Header and Navigation */
+    .nav-menu li {
+        margin-left: var(--spacing-md);
+    }
+    
+    /* Personal Section */
+    .personal-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        flex: 0 0 70%;
+        margin-bottom: var(--spacing-xl);
+        max-width: 300px;
+    }
+    
+    .action-buttons {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Skills Section */
+    .skills-container {
+        flex-direction: column;
+    }
+    
+    /* Experience Section */
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+    
+    .timeline-item.right {
+        left: 0;
+    }
+    
+    .timeline-item.left .timeline-marker,
+    .timeline-item.right .timeline-marker {
+        left: 18px;
+    }
+    
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-navigation {
+        margin: var(--spacing-lg) 0;
+    }
+    
+    .footer-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile (576px to 767px) */
+@media screen and (max-width: 767px) {
+    /* Header and Navigation */
+    .header-container {
+        padding: 0.75rem 1rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--background-white);
+        box-shadow: var(--shadow-md);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        transform: translateY(-150%);
+        transition: transform var(--transition-normal);
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+    
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+    
+    /* Sections */
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    /* Personal Section */
+    .personal-section {
+        padding-top: 5rem;
+    }
+    
+    .personal-details h1 {
+        font-size: 2rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Skills Section */
+    .strengths-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Experience Section */
+    .timeline-content {
+        padding: var(--spacing-md);
+    }
+    
+    /* Education Section */
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact Section */
+    .contact-form,
+    .contact-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Small Mobile (Up to 575px) */
+@media screen and (max-width: 575px) {
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Education Section */
+    .education-item {
+        flex-direction: column;
+    }
+    
+    .education-icon {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Footer */
+    .footer-menu {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
